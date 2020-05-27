@@ -12,12 +12,12 @@ The below step by step actions are performed to deploy the model
 -------------
 5) Creating Docker File
 
- FROM continuumio/anaconda3:4.4.0      >>> This is used for extracting the base image
- COPY . /usr/app/                      >>> This is for moving all the data in current directory to docker root directory
- EXPOSE 5000                           >>> This is for networking port
- WORKDIR /usr/app/                     >>> Changing the work directory to root directory
- RUN pip install -r requirements.txt   >>> Installing the dependencies
- CMD python app.py                     >>> Running the flask application
+ FROM continuumio/anaconda3:4.4.0       This is used for extracting the base image
+ COPY . /usr/app/                       This is for moving all the data in current directory to docker root directory
+ EXPOSE 5000                            This is for networking port
+ WORKDIR /usr/app/                      Changing the work directory to root directory
+ RUN pip install -r requirements.txt    Installing the dependencies
+ CMD python app.py                      Running the flask application
 -------------
 6) Building a docker image
 
